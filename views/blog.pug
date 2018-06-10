@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+  script(src="js/angularjs-1.6.10.js")
+  script(src="js/myApp.js")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="")
+    meta(name="author" content="")
+    title Blogging time!
+    // Bootstrap core CSS
+    link(href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet")
+    // Custom fonts for this template
+    link(href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css")
+    // Custom styles for this template
+    link(href="css/blog.min.css" rel="stylesheet")
+  body
+    // Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+      .container
+        a.navbar-brand(href="blog.html") Start Bootstrap
+        button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
+          | Menu
+          i.fa.fa-bars
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="blog.html") Home
+            li.nav-item
+              a.nav-link(href="about.html") About
+            li.nav-item
+              a.nav-link(href="post.html") Sample Post
+            li.nav-item
+              a.nav-link(href="contact.html") Contact
+    // Page Header
+    header.masthead(style="background-image: url('img/home-bg.jpg')")
+      .overlay
+      .container
+        .row
+          .col-lg-8.col-md-10.mx-auto
+            .site-heading
+              h1 Welcome to my blog!
+              span.subheading Experiences you might find worth your time
+    // Main Content
+    .container
+      .row
+        .col-lg-8.col-md-10.mx-auto
+          .post-preview
+            each val in values
+              h2.post-title= val.title
+              if val.lastModified
+                p.post-meta= val.lastModified
+              else
+                p.post-meta= val.currentDate
+              hr
+          // Check for ways to fetch older posts and display them as a list using the "Older Posts button"
+          // Pager
+          .clearfix
+            a.btn.btn-primary.float-right(href="#") Older Posts →
+    hr
+    // Footer
+    footer
+      .container
+        .row
+          .col-lg-8.col-md-10.mx-auto
+            ul.list-inline.text-center
+              li.list-inline-item
+                a(target="_blank" href="https://www.linkedin.com/in/lawrence-veigas-73421910b/")
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+              li.list-inline-item
+                a(target="_blank" href="https://github.com/LawrenceVeigas/")
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-github.fa-stack-1x.fa-inverse
+            p.copyright.text-muted Copyright © I am Lawrence Veigas 2018
+    // Bootstrap core JavaScript
+    script(src="vendor/jquery/jquery.min.js")
+    script(src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+    // Custom scripts for this template
+    script(src="js/blog.min.js")

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+    <title>Admin</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div align="center" style="margin-top: 20px">
+      <h1>Time to write some blog!</h1>
+      <form id="contentForm" action="/save" method="POST" >
+        <p>Title of the blog: <input type="text" name="title" placeholder="Title"></p>
+        <p>Start writing!</p><br/>
+        <textarea form="contentForm" name="content" id="content" rows="8" cols="80"></textarea><br/>
+        <input type="submit" value="Submit">
+      </form>
+
+    </div>
+  </body>
+</html>

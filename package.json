@@ -11,26 +11,18 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/resume",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-resume/issues",
-        "email": "feedback@startbootstrap.com"
-    },
     "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-resume.git"
-    },
+    "author": "Lawrence Veigas",
     "dependencies": {
+        "body-parser": "^1.18.3",
         "bootstrap": "4.1.1",
         "devicons": "^1.8.0",
         "express": "^4.16.3",
+        "express-form": "^0.12.6",
         "jquery": "3.3.1",
+        "mongodb": "^3.0.10",
         "popper.js": "^1.14.3",
+        "pug": "^2.0.3",
         "simple-line-icons": "^2.4.1"
     },
     "devDependencies": {
@@ -40,6 +32,7 @@
         "gulp-header": "2.0.5",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "4.0.1",
-        "gulp-uglify": "3.0.0"
+        "gulp-uglify": "3.0.0",
+        "nodemon": "^1.17.5"
     }
 }
